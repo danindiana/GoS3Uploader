@@ -2,6 +2,8 @@ See https://github.com/aws/aws-sdk-go/tree/main
 https://www.jajaldoang.com/post/upload-file-to-aws-s3-with-go/
 https://docs.aws.amazon.com/sdk-for-go/api/service/s3/s3manager/
 
+Chunking see: https://pkg.go.dev/gopkg.in/gotsunami/coquelicot.v1
+
 
 Explain how this works: https://github.com/aws/aws-sdk-go/tree/main
 
