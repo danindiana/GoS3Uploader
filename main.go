@@ -7,24 +7,13 @@ import (
 
 func main() {
     // Set up routes
-    http.HandleFunc("/upload", uploadHandler)
-    http.HandleFunc("/edit", editHandler)
+    http.HandleFunc("/upload", UploadHandler) // Use the UploadHandler from s3uploader.go
 
     // Start the server
-    log.Println("Starting server on :8080")
+    log.Println("Server starting on :8080")
     if err := http.ListenAndServe(":8080", nil); err != nil {
-        log.Fatal("ListenAndServe: ", err)
+        log.Fatalf("Server failed to start: %v", err)
     }
 }
 
-// Placeholder for the upload handler
-func uploadHandler(w http.ResponseWriter, r *http.Request) {
-    // TODO: Implement file upload logic
-    w.WriteHeader(http.StatusNotImplemented)
-}
-
-// Placeholder for the edit handler
-func editHandler(w http.ResponseWriter, r *http.Request) {
-    // TODO: Implement edit mode logic
-    w.WriteHeader(http.StatusNotImplemented)
-}
+// Note: The UploadHandler is now defined in s3uploader.go
